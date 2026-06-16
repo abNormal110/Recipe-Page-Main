@@ -1,0 +1,155 @@
+:root {
+  --c-White: hsl(0, 0%, 100%);
+  --c-Stone-100: hsl(30, 54%, 90%);
+  --c-Stone-150: hsl(30, 18%, 87%);
+  --c-Stone-600: hsl(30, 10%, 34%);
+  --c-Stone-900: hsl(24, 5%, 18%);
+  --c-Brown-800: hsl(14, 45%, 36%);
+  --c-Rose-800: hsl(332, 51%, 32%);
+  --c-Rose-50: hsl(330, 100%, 98%);
+  --color-background: var(--c-Stone-100);
+  --color-recipe: var(--c-White);
+  --color-primary: var(--c-Stone-900);
+  --color-secondery: var(--c-Stone-600);
+  --color-prep-background: var(--c-Rose-50);
+  --color-prep-text: var(--c-Rose-800);
+  --color-brown: var(--c-Brown-800);
+  --color-hr: var(--c-Stone-150);
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "YoungSerif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit";
+  margin: 0;
+}
+
+.container {
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+}
+
+.recipe {
+  background-color: var(--color-recipe);
+
+  @media (width >=68.75rem) {
+    max-width: 60rem;
+    margin-block: 50px;
+    padding: 30px;
+    border-radius: 16px;
+  }
+}
+
+.recipe__text {
+  padding-inline: 30px;
+}
+
+h1,
+h2 {
+  font-family: "YoungSerif";
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--color-brown);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  @media (width >=68.75rem) {
+    border-radius: 12px;
+  }
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 2.3rem;
+}
+
+p,
+ol li,
+ul li {
+  font-size: 1.35rem;
+  font-family: "Outfit";
+  color: var(--color-secondery);
+}
+
+.recipe__prep {
+  border-radius: 12px;
+  padding: 25px;
+  background-color: var(--color-prep-background);
+
+  h2 {
+    margin-block-start: 0;
+    font-family: "Outfit";
+    font-weight: 600;
+    color: var(--color-prep-text);
+  }
+}
+
+li {
+  line-height: 2.2rem;
+  padding-inline-start: 20px;
+}
+
+.recipe__prep ul li::marker {
+  color: var(--color-prep-text);
+}
+
+.recipe__ingredients {
+  padding-block-end: 30px;
+}
+
+.border_bottom {
+  border-bottom: solid 1px var(--color-hr);
+}
+
+.recipe__instructions {
+  padding-block-end: 20px;
+}
+
+.recipe__instructions h2 {
+  margin-block-start: 40px;
+}
+
+.list_style li::marker {
+  color: var(--color-brown);
+}
+
+table {
+  text-align: left;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px 18px;
+}
+
+th {
+  color: var(--color-secondery);
+  font-weight: 400;
+}
+
+td {
+  font-weight: 700;
+  color: var(--color-brown);
+}
